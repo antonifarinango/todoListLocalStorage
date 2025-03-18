@@ -21,17 +21,16 @@ contenedorEditarTarea.addEventListener("click",(e)=>{
 })
 
 let listaTareas = [];
-let datosLocal = JSON.parse(localStorage.getItem("lista"));
 let id = 0;
 let tareaEditada = "";
 
-if (datosLocal != "") {
-  datosLocal.forEach((tareasObj) => {
-    listaTareas.push(tareasObj);
-  });
+let datosLocal = JSON.parse(localStorage.getItem("lista")) || [];
 
+if (Array.isArray(datosLocal) && datosLocal.length > 0) {
+  listaTareas = [...datosLocal]; // Copia los datos a listaTareas
   id = datosLocal[0].id;
 }
+
 
 mostrarTareas();
 //AGREGAR TAREA
