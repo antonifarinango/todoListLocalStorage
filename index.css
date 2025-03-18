@@ -1,0 +1,218 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background: linear-gradient(to right, #42275a, #1565c0);
+}
+/*CONTENEDOR GENERAL*/
+.contenedor{
+    margin-top: 100px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+}
+
+/*VISTA TAREAS*/
+.contenedor-lista{
+    background-color: rgb(103, 103, 187);
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing:border-box;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+    align-items: center;
+}
+.contenedor-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    color: #000000;
+    font-size: 30px;
+}
+
+.contenedor-input{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
+.input-tarea{
+    width: 90%;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed; /* Fija el tamaño de las celdas */
+}
+tbody{
+    width: 100%;
+}
+tr{
+    height: 30px;
+    width: 100%;
+}
+td {
+    text-align: center;
+}
+.tdMarcar{
+    width: 5%;
+}
+.tdTarea{
+    width: 70%;
+    font-size: 11px;
+    overflow-wrap: break-word;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.tdAcciones{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*VISTA EDITAR*/
+.contenedor-editar-oculto{
+    display: none;
+}
+.contenedor-editar-mostrar{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.808);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-editar-tarea{
+    background-color: rgb(5, 96, 156);
+    height: 100px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    box-sizing:border-box;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+}
+.input-editar{
+    width: 80%;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+    border:  none;
+    border-radius: 5px;
+    outline-color: rgb(5, 96, 156);
+}
+.btnGuardar{
+    width: 20%;
+    height: 30px;
+    background-color: rgb(155, 235, 140);
+    color: #000000;
+    font-weight:400;
+}
+
+
+/*BOTONES*/
+.btn{
+    border-radius: 5px;
+    border: none;
+}
+.btnEliminarTodo{
+    width: 40px;
+    height: 30px;
+    background-color: #ff1100;
+}
+.btnEliminarTodo img{
+    height: 20px;
+}
+.btnAgregar{
+    width: 10%;
+    background-color: rgb(32, 184, 57);
+    color: white;
+    font-size: 20px;
+}
+.btn-eliminar{
+    height: 20px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F44336;
+}
+.btn-eliminar img{
+    height: 10px;
+}
+.btn-editar{
+    height: 20px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #26A1F4;
+}
+.btn-editar img{
+    height: 18px;
+}
+
+/*MOVIL*/
+
+@media screen and (max-width : 600px) {
+    .contenedor{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .btn-eliminar{
+        height: 20px;
+        width: 20px;
+    }
+    .btn-eliminar img{
+        height: 8px;
+    }
+    .btn-editar{
+        height: 20px;
+        width: 20px;
+    }
+    .btn-editar img{
+        height: 16px;
+    }
+
+    .tdMarcar{
+        width: 8%;
+    }
+    .tdTarea{
+        width: 72%;
+        font-size: 11px;
+    }
+    .tdAcciones{
+        gap: 8px;
+    }
+}
+@media screen and (max-width : 420px) {
+    .contenedor{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
